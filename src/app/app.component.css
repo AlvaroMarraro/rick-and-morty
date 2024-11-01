@@ -4,3 +4,13 @@
   right: 30px;
   z-index: 1000;
 }
+.background{
+  background-color: #141214;
+}
+.color{
+  background-color: #141214;
+  color: #BEEE62;
+}
+body{
+  background-color: #141214;
+}

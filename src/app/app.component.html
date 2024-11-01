@@ -1,8 +1,10 @@
-<app-nav-bar></app-nav-bar>
-<div class="container">
-  <router-outlet></router-outlet>
-</div>
-<button id="backToTop" class="btn btn-primary" style="display: none;" (click)="scrollToTop()">
-  Volver Arriba
-</button>
+
+  <div class="background">
+    <app-nav-bar></app-nav-bar>
+    <router-outlet></router-outlet>
+    <button id="backToTop" class="btn color" style="display: none;" (click)="scrollToTop()">
+      Volver Arriba
+   </button>
+  </div>
+
 

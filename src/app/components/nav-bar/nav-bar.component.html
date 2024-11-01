@@ -1,19 +1,13 @@
-<div class="container">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Rick and Morty</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarNav" >
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" routerLink="/personajes">Inicio</a>
-        </li>
-      </ul>
+<nav class="navbar navbar-expand-lg navbar-light background">
+  <div class="container-fluid d-flex justify-content-center align-items-center">
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <a class="navbar-brand text-color" href="#">Rick and Morty</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
       <form class="form-inline my-2 my-lg-0" [formGroup]="form">
         <input
-          class="form-control mr-sm-2"
+          class="form-control mr-sm-2 bg-grey"
           type="search"
           placeholder="Buscar por nombre"
           aria-label="Buscar"
@@ -21,7 +15,5 @@
         />
       </form>
     </div>
-  </nav>
-</div>
-
-
+  </div>
+</nav>
