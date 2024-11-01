@@ -1,0 +1,36 @@
+<div class="container mt-4">
+  <div class="row">
+    <div *ngFor="let personaje of personajes" class="col-md-3 mb-4">
+      <div class="card">
+        <img [src]="personaje.image" class="card-img-top" alt="{{ personaje.name }}">
+        <div class="card-body">
+          <h5 class="card-title">Nombre: {{ personaje.name }}</h5>
+          <p class="card-text">Status: {{ personaje.status }}</p>
+          <p class="card-text">Species: {{ personaje.species }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <nav>
+    <ul class="pagination justify-content-center">
+      <li class="page-item" [class.disabled]="paginaActual === 1">
+        <button class="page-link" (click)="paginaAnterior()">Anterior</button>
+      </li>
+      <li
+        *ngFor="let pagina of paginas"
+        class="page-item"
+        [class.active]="paginaActual === pagina"
+        [class.disabled]="pagina === '...'">
+        <button class="page-link" (click)="irAPagina(pagina)" [disabled]="pagina === '...'" *ngIf="pagina !== '...'">
+          {{ pagina }}
+        </button>
+      </li>
+      <li class="page-item" [class.disabled]="paginaActual === paginasTotales">
+        <button class="page-link" (click)="proximaPagina()">Siguiente</button>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+
